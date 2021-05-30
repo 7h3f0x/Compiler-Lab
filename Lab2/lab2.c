@@ -4,8 +4,8 @@
 #include <string.h>
 
 bool get_input(char *buf, size_t size) {
-    fgets(buf, size, stdin);
-    if (buf == NULL) {
+    char* res = fgets(buf, size, stdin);
+    if (res == NULL) {
         return false;
     }
     char *ch = strchr(buf, '\n');
@@ -51,7 +51,7 @@ int main(void) {
         
     }
 
-    for (int idx = 0; idx < sizeof(regs); ++idx) {
+    for (int idx = 0; idx < (sizeof(regs)/sizeof(regs[0])); ++idx) {
         regfree(&regs[idx]);
     }
 
