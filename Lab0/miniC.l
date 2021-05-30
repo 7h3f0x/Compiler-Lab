@@ -18,7 +18,7 @@ digit [0-9]
 
 operators [!\+\*\-=\|<>\/]|\+\+|\-\-|==|!=|\+=|\-=|\*=|\/=|>=|<=
 
-separators [\(\)\[\],;:]
+separators [\{\}\(\)\[\],;:]
 
 keyword char|else|if|int|return|void|while
 
